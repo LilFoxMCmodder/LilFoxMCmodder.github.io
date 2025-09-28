@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Windows-style Sweeping Blues</title>
-  <link rel="stylesheet" href="style1.css">
+  <title>cyph3rweb</title>
+  <link rel="stylesheet" href="Style1.css">
 </head>
 <body>
   <div class="bg">
@@ -14,16 +14,10 @@
     <div class="sweep s3"></div>
     <div class="sweep s4"></div>
   </div>
-  <script>
-  // Set performance tier on <html> using lightweight heuristics
-  (function () {
-    const mem = navigator.deviceMemory || 4;          // 0.5,1,2,4,8...
-    const cores = navigator.hardwareConcurrency || 4; // logical cores
-    let tier = "high";
-    if (mem <= 2 || cores <= 2) tier = "low";
-    else if (mem <= 4 || cores <= 4) tier = "med";
-    document.documentElement.setAttribute("data-tier", tier);
-  })();
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
