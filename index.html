@@ -14,17 +14,6 @@
     <div class="sweep s3"></div>
     <div class="sweep s4"></div>
   </div>
-  <script>
-  // Set performance tier on <html> using lightweight heuristics
-  (function () {
-    const mem = navigator.deviceMemory || 4;          // 0.5,1,2,4,8...
-    const cores = navigator.hardwareConcurrency || 4; // logical cores
-    let tier = "high";
-    if (mem <= 2 || cores <= 2) tier = "low";
-    else if (mem <= 4 || cores <= 4) tier = "med";
-    document.documentElement.setAttribute("data-tier", tier);
-  })();
-</script>
 </body>
 </html>
 
