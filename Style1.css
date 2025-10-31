@@ -1,1 +1,9 @@
-
+body {
+    background-image: url("Images/Pasted\ image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
