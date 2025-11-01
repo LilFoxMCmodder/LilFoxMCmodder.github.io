@@ -16,11 +16,39 @@ body {
     padding: 20px;
     border-radius: 8px;
 }
-.admin-box {
+
+body.home1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+.admin-box-home1 {
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(15px);
     border: 1px solid white;
     display: inline-block;
     padding: 20px;
     border-radius: 8px;
+}
+
+.xp-line-home1 {
+   height: 4px;
+   border: none;
+   border-radius: 10px;
+   background: linear-gradient(90deg, #0033cc, #009933, #ffcc00, #ff3300, #0033cc);
+   background-size: 10000%;
+   animation: xp-animation-home1 15s linear infinite;
+   margin: 10px 0;
+
+   filter: brightness(1.15);
+   box-shadow: 0 0 10px rgba(0, 128, 255, 0.7),
+               0 0 20px rgba(0, 255, 128, 0.5),
+               0 0 30px rgba(214, 214, 33, 0.4),
+               0 0 40px rgba(226, 75, 5, 0.3);
+               
+}
+@keyframes xp-animation-home1 {
+   from { background-position: 0% 50% }
+   to { background-position: 100% 50% }
 }
