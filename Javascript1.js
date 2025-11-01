@@ -1,5 +1,5 @@
 function checkLogin() {
-    
+
     //this would get the users input
     let username = document.getElementById("username").value; 
     let password = document.getElementById("password").value;
@@ -10,3 +10,9 @@ function checkLogin() {
         window.location.href = "Home1.html";
     }
 }
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        checkLogin();
+    }
+});
