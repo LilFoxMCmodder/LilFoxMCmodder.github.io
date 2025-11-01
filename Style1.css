@@ -30,8 +30,9 @@ body.home1 {
     border: 1px solid white;
     display: inline-block;
     margin-top: 20px;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 20px 200px;
+    border-radius: 8px; 
+    width: auto;
 }
 .xp-line-home1 {
    height: 4px;
@@ -59,7 +60,7 @@ body.home1 {
     text-align: center;
     color: black;
     font-family: 'Arial', sans-serif;
-    margin-top: 200px;
+    margin-top: 175px;
 
     filter: brightness(1);
     box-shadow: 0 0 10px rgba(0, 128, 255, 0.7),
