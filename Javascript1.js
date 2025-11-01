@@ -1,5 +1,5 @@
-function checklogin() {
-    alert("Checking login...");
+function checkLogin() {
+    alert("checkLogin() fired");
 
     //this would get the users input
     let username = document.getElementById("username").value; 
