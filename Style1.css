@@ -16,3 +16,11 @@ body {
     padding: 20px;
     border-radius: 8px;
 }
+.admin-box {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(15px);
+    border: 1px solid white;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 8px;
+}
