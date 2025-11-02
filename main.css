@@ -1,0 +1,85 @@
+/* Global Styles */
+body {
+  background-image: url("Images/Pasted image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Login Box Styling */
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid white;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 128, 255, 0.7),
+              0 0 20px rgba(0, 255, 128, 0.5),
+              0 0 30px rgba(214, 214, 33, 0.4),
+              0 0 40px rgba(226, 75, 5, 0.3);
+}
+
+/* Home Page Layout */
+body.home1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Admin Box Neon Glow */
+.admin-box-home1 {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(15px);
+  border: 1px solid white;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px 200px;
+  border-radius: 8px;
+  width: auto;
+  box-shadow: 0 0 10px rgba(0, 128, 255, 0.7),
+              0 0 20px rgba(0, 255, 128, 0.5),
+              0 0 30px rgba(214, 214, 33, 0.4),
+              0 0 40px rgba(226, 75, 5, 0.3);
+}
+
+/* XP Style Line */
+.xp-line-home1 {
+  height: 4px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0033cc, #009933, #ffcc00, #ff3300, #0033cc);
+  background-size: 10000%;
+  animation: xp-animation-home1 15s linear infinite;
+  margin: 10px 0;
+  filter: brightness(1.15);
+  box-shadow: 0 0 10px rgba(0, 128, 255, 0.7),
+              0 0 20px rgba(0, 255, 128, 0.5),
+              0 0 30px rgba(214, 214, 33, 0.4),
+              0 0 40px rgba(226, 75, 5, 0.3);
+}
+
+@keyframes xp-animation-home1 {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+/* Centered Content Message */
+.content-home1 {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(15px);
+  border: 1px solid white;    
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 8px;
+  filter: brightness(1);
+  box-shadow: 0 0 10px rgba(0, 128, 255, 0.7),
+              0 0 20px rgba(0, 255, 128, 0.5),
+              0 0 30px rgba(214, 214, 33, 0.4),
+              0 0 40px rgba(226, 75, 5, 0.3);
+}

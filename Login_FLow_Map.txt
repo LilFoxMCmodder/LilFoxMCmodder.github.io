@@ -1,0 +1,5 @@
+[Frontend (HTML/CSS/JS)] ---> sends username/password ---> [Backend (Node.js, Python, PHP...)]
+                                                              |
+                                                    checks password in database
+                                                              |
+                                   <--- sends back success or failure (maybe a session token)
