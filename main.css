@@ -39,7 +39,7 @@ body.home1 {
   border: 1px solid white;
   display: inline-block;
   margin-top: 20px;
-  padding: 20px 200px;
+  padding: 20px 5%;
   border-radius: 8px;
   width: auto;
   box-shadow: 0 0 10px rgba(0, 128, 255, 0.7),
