@@ -3,7 +3,7 @@ async function checkLogin() {
   const password = document.getElementById("password").value;
 
   try {
-    const response = await fetch("https://cyph3rweb-backend.onrender.com", {
+    const response = await fetch("https://cyph3rweb-backend.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
