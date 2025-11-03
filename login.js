@@ -1,24 +1,28 @@
-// Login check function
-function checkLogin() {
-    // get the users input
-    let username = document.getElementById("username").value; 
-    let password = document.getElementById("password").value;
+async function checkLogin() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
 
-    // validate credentials (simple check)
-    if (username === "admin" && password === "password") {
-        // if correct, redirect to home.html
-        window.location.href = "home.html";
+  try {
+    const response = await fetch("https://cyph3rweb-backend.onrender.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ username, password })
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      window.location.href = "home.html";
+    } else {
+      document.getElementById("login-message").textContent = result.message;
+      document.getElementById("login-message").style.color = "red";
     }
-    else {
-        // if incorrect, show error message
-        const msg = document.getElementById("login-message");
-        msg.textContent = "Invalid username or password. Try again.";
-        msg.style.color = "red";
-    }
+  } catch (error) {
+    console.error("Login request failed:", error);
+    document.getElementById("login-message").textContent = "Something went wrong. Try again later.";
+    document.getElementById("login-message").style.color = "red";
+  }
 }
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        checkLogin();
-    }
-});
