@@ -229,19 +229,15 @@ li {
   justify-content: center;
 }
 
-.photo-placeholder {
+.profile-photo {
   width: min(100%, 340px);
   aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 2rem;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.03)),
-    radial-gradient(circle at top, rgba(255,255,255,0.15), transparent 65%);
   border: 1px solid rgba(255,255,255,0.16);
-  display: grid;
-  place-items: center;
-  color: var(--muted);
-  text-align: center;
-  padding: 1rem;
+  display: block;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
 }
 
 .glass {
