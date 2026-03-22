@@ -309,6 +309,12 @@ li {
   gap: 1.25rem;
 }
 
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
 .clean-list {
   padding-left: 1.15rem;
   margin-bottom: 0;
@@ -376,11 +382,12 @@ li {
 }
 
 @media (max-width: 960px) {
-  .hero,
-  .grid-two,
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
+.hero,
+.grid-two,
+.grid-three,
+.project-grid {
+  grid-template-columns: 1fr;
+}
 
   .hero {
     min-height: auto;
