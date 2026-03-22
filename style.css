@@ -359,17 +359,6 @@ li {
   color: rgba(233, 240, 252, 0.7);
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -426,8 +415,8 @@ li {
 
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  filter: blur(8px);
+  transform: translateY(24px);
+  filter: blur(6px);
   transition:
     opacity 0.7s ease,
     transform 0.7s ease,
@@ -435,7 +424,7 @@ li {
   will-change: opacity, transform, filter;
 }
 
-.reveal.is-visible {
+.reveal.visible {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
