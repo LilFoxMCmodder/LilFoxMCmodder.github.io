@@ -580,7 +580,8 @@ li {
 }
 
 .reveal.visible .laptop {
-  animation: laptop-float 6s ease-in-out 1s infinite;
+  animation: laptop-float-twist 5s ease-in-out 1s infinite;
+  transform-origin: center center;
 }
 
 .reveal.visible .laptop-screen {
@@ -621,6 +622,27 @@ li {
     opacity: 1;
     transform: scaleX(1);
     filter: brightness(1.12);
+  }
+}
+@keyframes laptop-float-twist {
+  0%, 82%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  40% {
+    transform: translateY(-8px) rotate(0deg) scale(1);
+  }
+
+  88% {
+    transform: translateY(-6px) rotate(-4deg) scale(1.01);
+  }
+
+  92% {
+    transform: translateY(-6px) rotate(4deg) scale(1.01);
+  }
+
+  96% {
+    transform: translateY(-3px) rotate(-2deg) scale(1);
   }
 }
 
