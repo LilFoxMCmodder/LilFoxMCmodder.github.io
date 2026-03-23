@@ -456,39 +456,46 @@ li {
   text-decoration: underline;
 }
 
-.laptop-accent {
+.laptop-panel {
   position: relative;
-  margin-top: 1.35rem;
-  min-height: 220px;
+  min-height: 340px;
   display: grid;
   place-items: center;
   overflow: hidden;
-  border-radius: 1.35rem;
   background:
-    radial-gradient(circle at 50% 20%, rgba(70, 160, 255, 0.12), transparent 58%),
-    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
-  border: 1px solid rgba(255,255,255,0.08);
+    radial-gradient(circle at 50% 22%, rgba(70, 160, 255, 0.16), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+}
+
+.laptop-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255,255,255,0.10), transparent 18%),
+    radial-gradient(circle at 80% 80%, rgba(70,160,255,0.10), transparent 24%);
+  pointer-events: none;
 }
 
 .laptop-glow {
   position: absolute;
-  inset: auto 50% 14%;
-  width: 12rem;
-  height: 4.75rem;
+  left: 50%;
+  bottom: 3.2rem;
+  width: 13rem;
+  height: 5rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(55, 145, 255, 0.30), transparent 72%);
+  background: radial-gradient(circle, rgba(55, 145, 255, 0.34), transparent 72%);
   filter: blur(24px);
-  opacity: 0.9;
+  opacity: 0.95;
   pointer-events: none;
 }
 
 .laptop {
   position: relative;
-  width: min(100%, 270px);
+  width: min(100%, 280px);
   display: grid;
   place-items: center;
-  transform-style: preserve-3d;
 }
 
 .laptop-screen {
@@ -498,37 +505,26 @@ li {
   border-radius: 1rem;
   border: 1px solid rgba(255,255,255,0.18);
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05)),
-    linear-gradient(135deg, rgba(10,18,34,0.92), rgba(5,10,20,0.98));
+    linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+    linear-gradient(135deg, rgba(10,18,34,0.94), rgba(5,10,20,0.98));
   box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.28),
-    0 0 30px rgba(70, 160, 255, 0.16),
+    0 18px 36px rgba(0,0,0,0.28),
+    0 0 34px rgba(70,160,255,0.18),
     inset 0 1px 0 rgba(255,255,255,0.14);
   overflow: hidden;
   transform-origin: bottom center;
   transform: perspective(900px) rotateX(82deg) translateY(16px) scale(0.96);
 }
 
-.laptop-screen::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 15%, rgba(255,255,255,0.12), transparent 25%),
-    radial-gradient(circle at 75% 20%, rgba(70,160,255,0.14), transparent 30%);
-  pointer-events: none;
-}
-
 .camera-dot {
   position: absolute;
   top: 0.5rem;
   left: 50%;
-  width: 0.38rem;
-  height: 0.38rem;
+  width: 0.36rem;
+  height: 0.36rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: rgba(220, 238, 255, 0.65);
-  box-shadow: 0 0 10px rgba(120, 190, 255, 0.28);
+  background: rgba(220,238,255,0.7);
 }
 
 .code-lines {
@@ -545,15 +541,14 @@ li {
   border-radius: 999px;
   background:
     linear-gradient(90deg,
-      rgba(170, 220, 255, 0.92),
-      rgba(85, 165, 255, 0.82) 60%,
+      rgba(170,220,255,0.95),
+      rgba(85,165,255,0.84) 60%,
       rgba(255,255,255,0.22)
     );
   box-shadow:
-    0 0 12px rgba(70, 160, 255, 0.20),
-    0 0 24px rgba(40, 120, 255, 0.08);
+    0 0 12px rgba(70,160,255,0.22),
+    0 0 24px rgba(40,120,255,0.10);
   opacity: 0.88;
-  transform: scaleX(0.92);
 }
 
 .code-line.w-80 { width: 80%; }
@@ -572,7 +567,7 @@ li {
     linear-gradient(180deg, rgba(20,30,46,0.92), rgba(7,11,20,0.98));
   border: 1px solid rgba(255,255,255,0.16);
   box-shadow:
-    0 12px 24px rgba(0, 0, 0, 0.22),
+    0 12px 24px rgba(0,0,0,0.22),
     inset 0 1px 0 rgba(255,255,255,0.16);
 }
 
@@ -584,11 +579,11 @@ li {
   height: 0.36rem;
   transform: translate(-50%, -50%);
   border-radius: 999px;
-  background: rgba(210, 230, 255, 0.18);
+  background: rgba(210,230,255,0.18);
 }
 
 .reveal.visible .laptop {
-  animation: laptop-float 6s ease-in-out 1.05s infinite;
+  animation: laptop-float 6s ease-in-out 1s infinite;
 }
 
 .reveal.visible .laptop-screen {
@@ -599,17 +594,9 @@ li {
   animation: code-pulse 2.6s ease-in-out infinite;
 }
 
-.reveal.visible .code-line:nth-child(2) {
-  animation-delay: 0.25s;
-}
-
-.reveal.visible .code-line:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-.reveal.visible .code-line:nth-child(4) {
-  animation-delay: 0.75s;
-}
+.reveal.visible .code-line:nth-child(2) { animation-delay: 0.2s; }
+.reveal.visible .code-line:nth-child(3) { animation-delay: 0.4s; }
+.reveal.visible .code-line:nth-child(4) { animation-delay: 0.6s; }
 
 @keyframes laptop-open {
   0% {
@@ -623,12 +610,8 @@ li {
 }
 
 @keyframes laptop-float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes code-pulse {
@@ -644,21 +627,9 @@ li {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .reveal.visible .laptop,
-  .reveal.visible .laptop-screen,
-  .reveal.visible .code-line {
-    animation: none;
-  }
-
-  .laptop-screen {
-    transform: perspective(900px) rotateX(18deg) translateY(0) scale(1);
-  }
-}
-
 @media (max-width: 640px) {
-  .laptop-accent {
-    min-height: 180px;
+  .laptop-panel {
+    min-height: 240px;
   }
 
   .laptop {
